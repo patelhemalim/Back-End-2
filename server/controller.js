@@ -27,7 +27,7 @@ module.exports={
     updateHouse:(req,res)=>{
         const{type}=req.body;
         let index=houses.findIndex(elem=>elem.id===+req.params.id)
-        if(type==='minus'&& houses.find[index].price>10000){
+        if(type==='minus'&& houses[index].price>10000){
             houses[index].price-=10000;
             res.status(200).send(houses);
         }else if (type==='plus'){
